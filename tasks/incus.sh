@@ -3,7 +3,12 @@
 # shellcheck disable=SC2016
 
 task::run() {
-  dnf_install incus
+  local pkgs=(
+    incus
+    incus-tools
+  )
+
+  dnf_install "${pkgs[@]}"
 
   # Incus is socket-activated
   as_root systemctl daemon-reload || true

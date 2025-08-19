@@ -24,6 +24,6 @@ smart_borders off
 ### Output configuration
 #
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg /usr/share/backgrounds/default.jxl fill
+output * bg /home/jase/Pictures/Wallpapers/dsk002.jpg fill
 
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'

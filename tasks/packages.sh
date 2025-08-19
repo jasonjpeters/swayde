@@ -32,6 +32,7 @@ task::run() {
         kanshi
         make
         mariadb
+        mkcert
         plocate
         ripgrep
         rsync

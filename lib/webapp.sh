@@ -83,13 +83,21 @@ if ! declare -F webapp_install >/dev/null 2>&1; then
         fi
 
         # --- write .desktop ---
+        # --- write .desktop ---
         cat >"$desktop_file" <<EOF
 [Desktop Entry]
 Version=1.0
 Type=Application
 Name=$app_name
 Comment=$app_name
-Exec=$browser --new-window --ozone-platform=wayland --app="$app_url" --name="$app_id" --class="$app_id"
+Exec=$browser \
+  --app="$app_url" \
+  --name="$app_id" --class="$app_id" \
+  --user-data-dir="$HOME/.local/share/webapps/$app_id" \
+  --no-first-run --no-default-browser-check --password-store=basic \
+  --ozone-platform=wayland \
+  --use-gl=egl \
+  --enable-features=WaylandWindowDecorations,UseOzonePlatform
 StartupWMClass=$app_id
 Icon=$icon_path
 Terminal=false
