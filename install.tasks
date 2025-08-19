@@ -1,0 +1,23 @@
+## Prerequisites and requirements
+prerequisites
+swayfx
+sources
+
+## Install tools and applications
+groups
+packages
+nodejs
+eza
+git
+docker
+incus
+neovim
+vscode
+windsurf
+zed
+webapps
+
+## Configuration
+xdg-user-dirs
+link-configs
+omzsh

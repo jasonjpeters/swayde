@@ -1,0 +1,63 @@
+* {
+  background-color: rgba(27, 28, 39, 1);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "Fira Code", "Font Awesome 6 Free", "Font Awesome 6 Brands";
+  font-size: 12px;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+  opacity: 0.3;
+}
+#workspaces button.empty {
+  opacity: 0.5;
+}
+#workspaces button.visible {
+  opacity: 1;
+}
+
+#custom-swayde {
+  font-size: 16px;
+}
+
+#tray,
+#battery,
+#pulseaudio,
+#bluetooth,
+#clock {
+  min-width: 12px;
+  margin: 0 7.5px;
+  font-size: 14px;
+}
+#network,
+#cpu {
+  font-size: 24px;
+}
+
+#custom-swayde,
+#idle_inhibitor {
+  margin: 0 12px;
+}
+
+#custom-expand-icon {
+  margin-right: 7px;
+}
+
+tooltip {
+  padding: 2px;
+}
