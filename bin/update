@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Function to update system packages
+update_system_packages() {
+    echo "Updating system packages..."
+    ${SUDO:-sudo} dnf update -y
+    ${SUDO:-sudo} dnf upgrade -y
+    ${SUDO:-sudo} dnf autoremove -y
+}
+
+# Function to update Flatpak packages
+update_flatpak() {
+    if command -v flatpak &>/dev/null; then
+        echo "Updating Flatpak packages..."
+        ${SUDO:-sudo} flatpak update -y
+        ${SUDO:-sudo} flatpak upgrade -y
+    else
+        echo "Flatpak is not installed. Skipping..."
+    fi
+}
+
+# Function to update global Composer packages
+update_composer() {
+    if command -v composer &>/dev/null; then
+        echo "Updating global Composer packages..."
+        composer global update
+    else
+        echo "Composer is not installed. Skipping..."
+    fi
+}
+
+# Function to update global npm packages
+update_npm() {
+    if command -v npm &>/dev/null; then
+        echo "Updating global npm packages..."
+        npm update -g
+    else
+        echo "npm is not installed. Skipping..."
+    fi
+}
+
+# Run all updates
+update_system_packages
+update_flatpak
+update_composer
+update_npm
+
+echo "All updates completed!"
