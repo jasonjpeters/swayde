@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+read -p "Container Name: " name
+read -p "Device Name: " device 
+read -p "Host Directory: " hdir
+read -p "Container Directory: " cdir 
+
+incus config device add "$name" "$device" disk source="$hdir" path="$cdir" shift=true

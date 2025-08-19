@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+read -p "Container Name: " name
+read -p "IP Address: " ip
+
+incus stop "$name"
+incus network attach incusbr0 "$name" eth0 eth0
+incus config device set "$name" eth0 ipv4.address "$ip"
+incus start "$name"
