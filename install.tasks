@@ -21,3 +21,6 @@ webapps
 xdg-user-dirs
 link-configs
 omzsh
+
+## Languages
+php

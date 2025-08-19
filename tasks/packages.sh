@@ -4,6 +4,7 @@ task::run() {
     local pkgs=(
         bat
         btop
+        ca-certificates
         cascadia-code-nf-fonts
         curl
         dnf-plugins-core
@@ -29,6 +30,7 @@ task::run() {
         ImageMagick
         jq
         kanshi
+        make
         mariadb
         plocate
         ripgrep
@@ -36,13 +38,13 @@ task::run() {
         shfmt
         tmux
         unzip
+        vim-default-editor
         vips-tools
         wdisplays
         wget
         whois
         xmlstarlet
         zip
-        vim-default-editor
         zsh
     )
 
