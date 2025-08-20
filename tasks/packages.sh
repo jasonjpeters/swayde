@@ -34,6 +34,8 @@ task::run() {
         mariadb
         mkcert
         plocate
+        qt5ct
+        qt6ct
         ripgrep
         rsync
         shfmt
