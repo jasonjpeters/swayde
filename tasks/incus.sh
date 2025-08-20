@@ -118,9 +118,7 @@ networks:
   type: bridge
   config:
     ipv4.address: 10.10.10.1/24
-    ipv4.firewall: "false"
     ipv6.address: none
-    ipv6.firewall: "false"
 storage_pools:
 - name: default
   driver: dir
