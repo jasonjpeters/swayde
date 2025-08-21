@@ -10,6 +10,4 @@ task::run() {
 
     copr_enable "agriffis/neovim-nightly"
     dnf_install "${pkgs[@]}"
-
-    npm install -g neovim
 }
