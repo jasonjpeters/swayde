@@ -19,5 +19,6 @@ task::run() {
     npm install -g \
         neovim \
         @automattic/vip \
-        @wordpress/create-block
+        @wordpress/create-block \
+        @wordpress/env
 }
